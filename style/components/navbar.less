@@ -1,0 +1,28 @@
+// Nav bar
+// --------------------------------------------------
+
+// Bar docked to top of viewport for showing page title and actions
+.bar-nav {
+  top: 0;
+}
+
+// Centered text in the .bar-nav
+//
+// We position the absolutely to make sure the title is always centered
+.title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 (-@bar-side-spacing);
+  font-size: @font-size-default;
+  font-weight: @font-weight;
+  line-height: @bar-base-height;
+  color: @color-text;
+  text-align: center;
+  white-space: nowrap;
+}
+// Retain specified title color
+.title a {
+  color: inherit;
+}
