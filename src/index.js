@@ -5,6 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 module.exports = {
+  Container: require('./Container'),
   NavBar: require('./NavBar'),
   ToolBar: require('./ToolBar'),
   Button: require('./Button'),
