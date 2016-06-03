@@ -5,8 +5,6 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import { routes } from './route'
 
-const routes = (
-  <Router history={ browserHistory } routes={routes} />
-);
-
-ReactDOM.render(routes, document.querySelector('#app'));
+ReactDOM.render((
+  <Router history={browserHistory} routes={routes}></Router>
+), document.getElementById('app'))
