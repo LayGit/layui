@@ -1,5 +1,9 @@
 import '../style/layui.less'
 
+import injectTapEventPlugin from 'react-tap-event-plugin'
+// tap事件初始化
+injectTapEventPlugin()
+
 module.exports = {
   NavBar: require('./NavBar'),
   ToolBar: require('./ToolBar'),
