@@ -1,0 +1,47 @@
+{
+  "name": "layui",
+  "version": "0.0.1",
+  "description": "Mobile UI Components For React",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "gulp build:lib",
+    "start": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LayGit/layui.git"
+  },
+  "keywords": [
+    "layui",
+    "mobile",
+    "css",
+    "fonts",
+    "ios",
+    "android",
+    "reactui",
+    "react",
+    "ui"
+  ],
+  "author": "Lay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LayGit/layui/issues"
+  },
+  "homepage": "https://github.com/LayGit/layui#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-object-assign": "^1.2.1",
+    "eslint": "^2.11.1",
+    "gulp": "^3.9.1",
+    "history": "^3.0.0",
+    "react": "^15.1.0",
+    "react-component-tools": "^1.1.2",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
+}
