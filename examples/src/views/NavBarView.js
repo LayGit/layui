@@ -1,9 +1,12 @@
 import React from 'react'
+import { NavBar } from 'layui'
 
 export default class NavBarView extends React.Component {
   render () {
     return (
-      <div></div>
+      <div>
+        <NavBar title="首页" />
+      </div>
     )
   }
 }
