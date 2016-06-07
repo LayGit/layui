@@ -20,5 +20,6 @@ module.exports = {
   Picker: require('./Picker'),
   DateTimePicker: require('./DateTimePicker'),
   List: require('./List'),
-  Card: require('./Card')
+  Card: require('./Card'),
+  Icon: require('./Icon')
 }
