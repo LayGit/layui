@@ -8,14 +8,29 @@ class Block extends React.Component {
   }
 }
 
-class Container extends React.Component {
+class BlockTitle extends React.Component {
   render () {
     return (
-      <div className="content">{this.props.children}</div>
+      <div className="content-block-title">{this.props.children}</div>
     )
   }
 }
 
+class Container extends React.Component {
+  render () {
+    return (
+      <div className="content">
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+Container.propTypes = {
+  blockTitle: React.PropTypes.string
+}
+
 Container.Block = Block
+Container.BlockTitle = BlockTitle
 
 export default Container
