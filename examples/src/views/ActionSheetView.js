@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActionSheet } from 'layui'
+import { NavBar, Container, ActionSheet } from 'layui'
 
 export default class ActionSheetView extends React.Component {
   constructor(props){
@@ -46,7 +46,10 @@ export default class ActionSheetView extends React.Component {
     ]
     return (
       <div>
-        <p onTouchTap={this.showActionSheet.bind(this)}>操作</p>
+        <NavBar title="操作表" />
+        <Container>
+          <p onTouchTap={this.showActionSheet.bind(this)}>操作</p>
+        </Container>
         <ActionSheet
           title='请选择'
           actionList={actionList}
