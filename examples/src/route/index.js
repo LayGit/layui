@@ -2,7 +2,7 @@ import {
   App,
   Dashboard,
   ActionSheetView,
-  AlertView,
+  ModalView,
   ButtonView,
   CalendarView,
   CardView,
@@ -24,7 +24,7 @@ export const routes = {
   indexRoute: { component: Dashboard },
   childRoutes:[
     { path: 'actionsheet', component: ActionSheetView },
-    { path: 'alert', component: AlertView },
+    { path: 'modal', component: ModalView },
     { path: 'button', component: ButtonView },
     { path: 'calendar', component: CalendarView },
     { path: 'card', component: CardView },

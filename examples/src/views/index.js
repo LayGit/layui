@@ -2,7 +2,7 @@ module.exports = {
   App: require('./App'),
   Dashboard: require('./Dashboard'),
   ActionSheetView: require('./ActionSheetView'),
-  AlertView: require('./AlertView'),
+  ModalView: require('./ModalView'),
   ButtonView: require('./ButtonView'),
   CalendarView: require('./CalendarView'),
   CardView: require('./CardView'),

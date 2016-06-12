@@ -14,7 +14,7 @@ module.exports = {
   SearchBar: require('./SearchBar'),
   TabBar: require('./TabBar'),
   Grid: require('./Grid'),
-  Alert: require('./Alert'),
+  modal: require('./modal'),
   Calendar: require('./Calendar'),
   ActionSheet: require('./ActionSheet'),
   Picker: require('./Picker'),
