@@ -29,6 +29,7 @@ class Item extends Component {
       arrow,
       href,
       linkProps,
+      formItem,
       linkComponent: LinkComponent,
       ...props
     } = this.props
@@ -56,7 +57,13 @@ class Item extends Component {
     let mediaNode = null
     if ('media' in this.props)
       mediaNode = (<div className="item-media">{media}</div>)
-    let titleNode = (<div className="item-title">{title}</div>)
+
+    const titleClass = {
+      'item-title': true
+    }
+    if ('formItem' in this.props)
+      titleClass['label'] = true
+    let titleNode = (<div className={classnames(titleClass)}>{title}</div>)
 
     let afterNode = null
     if ('after' in this.props) {
@@ -80,6 +87,8 @@ class Item extends Component {
     let innerNode = (<div className="item-inner">{titleNode}{afterNode}</div>)
     if (hasSubTitleOrText)
       innerNode = (<div className="item-inner"><div className="item-title-row">{titleNode}{afterNode}</div>{subTitleNode}{textNode}</div>)
+    if ('formItem' in this.props)
+      innerNode = (<div className="item-inner">{titleNode}{formItem}</div>)
     return (
       <li {...props}>
         <LinkComponent className={classnames(liClass)} {...linkProps}>
@@ -93,13 +102,14 @@ class Item extends Component {
 
 Item.propTypes = {
   media: React.PropTypes.node,
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string,
   after: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]),
   subTitle: React.PropTypes.string,
   text: React.PropTypes.string,
   arrow: React.PropTypes.bool,
   href: React.PropTypes.string,
-  linkProps: React.PropTypes.object
+  linkProps: React.PropTypes.object,
+  formItem: React.PropTypes.node
 }
 
 class List extends Component {
