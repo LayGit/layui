@@ -76,7 +76,7 @@ export default class PickerView extends React.Component {
       }
     ]
     picker.picker({
-      title: '请选择手机',
+      title: '请选择称呼',
       content: [{
         col: '姓',
         values: datas1

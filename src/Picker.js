@@ -25,9 +25,13 @@ class Picker extends Component {
     //初始值
     const state = this.state
     const length = this.props.content.length
+    let select = this.props.target.getAttribute('data-selected')
+    select = JSON.parse(select)
     for(var i = 0;i < length;i ++){
-      let index = this.props.target.getAttribute('data-selected' + i)
-      if(!index){
+      let index
+      if(select){
+        index = select[i]
+      }else{
         index = 0
       }
       state.onMove.push({
@@ -133,13 +137,15 @@ class Picker extends Component {
     window.removeEventListener('click',this.pickerOnBlur.bind(this),false)
     //回调
     let ret = []
+    const select = {}
     for(var i = 0;i < state.onMove.length;i ++){
-      this.props.target.setAttribute('data-selected' + i,state.onMove[i].selected)
+      select[i] = state.onMove[i].selected
       ret.push({
         col: this.props.content[i].col,
         value: this.props.content[i].values[state.onMove[i].selected]
       })
     }
+    this.props.target.setAttribute('data-selected',JSON.stringify(select))
     this.props.callBack(ret)
   }
 
